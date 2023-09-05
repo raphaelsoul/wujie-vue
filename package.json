@@ -1,5 +1,5 @@
 {
-  "name": "wujie-vue",
+  "name": "@zys/wujie-vue",
   "version": "0.0.1",
   "description": "基于 wuejie 封装的vue组件",
   "main": "index.js",
