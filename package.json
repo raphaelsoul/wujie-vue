@@ -1,0 +1,28 @@
+{
+  "name": "wujie-vue",
+  "version": "0.0.1",
+  "description": "基于 wuejie 封装的vue组件",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zys8119/wujie-vue.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "typings": "types.d.ts",
+  "bugs": {
+    "url": "https://github.com/zys8119/wujie-vue/issues"
+  },
+  "homepage": "https://github.com/zys8119/wujie-vue#readme",
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "wujie": "^1.0.18"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.197",
+    "vue": "^3.3.4"
+  }
+}
