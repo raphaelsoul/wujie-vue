@@ -1,11 +1,11 @@
-import { App, getCurrentInstance} from "vue"
+import { getCurrentInstance} from "vue"
 import wujieVue from "./wujie-vue.vue"
 export const setupWujie = ()=>{
     if (window.__POWERED_BY_WUJIE__) {
         window.__THIS_WUJIE_VIEW_VM__ = getCurrentInstance();
     }
 }
-export const install = function (app:App){
+export const install = function (app){
     if (window.__POWERED_BY_WUJIE__) {
         window.__THIS_WUJIE_VIEW_VM__ = app;
     }
