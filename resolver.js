@@ -3,8 +3,8 @@ const resolver = function (){
         name=>{
             if(/^WujieVue|wujie-vue$/.test(name)){
                 return {
-                    name,
-                    from:'@zys/wujie-vue'
+                    name:'default',
+                    from:'@zys/wujie-vue/wujie-vue.vue'
                 }
             }
         }

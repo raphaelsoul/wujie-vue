@@ -1,7 +1,5 @@
 import { merge, get } from "lodash"
 import { getCurrentInstance} from "vue"
-import WujieVueComponent from "./wujie-vue.vue"
-export const WujieVue = WujieVueComponent
 export const setupWujie = function (){
     if (window.__POWERED_BY_WUJIE__) {
         window.__THIS_WUJIE_VIEW_VM__ = getCurrentInstance();
@@ -23,6 +21,5 @@ export const install = function (app, options = {}){
             }
         }
     })
-    app.component('WujieVue', WujieVueComponent)
 }
 export default install

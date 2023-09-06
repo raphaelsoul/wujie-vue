@@ -3,11 +3,24 @@
 
 ## 使用指南
 
-1.main.ts
+1.如果您是使用 `unplugin-vue-components/vite` 插件，可以按需求使用内置的 Resolver
 
+* vite.config.ts
 ```typescript
-import wujie from '@zys/wujie-vue';
-app.use(wujie);
+import resolver from '@zys/wujie-vue/resolver';
+import { defineConfig } from 'vite';
+export default defineConfig({
+    //...
+    plugins:[
+        Components({
+            resolvers: [
+                //....
+                resolver()
+            ],
+        }),
+    ]
+    //...
+})
 ```
 
 2.主框架业务代码
@@ -68,22 +81,4 @@ onMounted(()=>{
 })
 ```
 
-2.如果您是使用 `unplugin-vue-components/vite` 插件，可以按需求使用内置的 Resolver
 
-* vite.config.ts
-```typescript
-import resolver from '@zys/wujie-vue/resolver';
-import { defineConfig } from 'vite';
-export default defineConfig({
-    //...
-    plugins:[
-        Components({
-            resolvers: [
-                //....
-                resolver()
-            ],
-        }),
-    ]
-    //...
-})
-```
