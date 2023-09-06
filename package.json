@@ -1,6 +1,6 @@
 {
   "name": "@zys/wujie-vue",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "基于 wuejie 封装的vue组件",
   "main": "index.js",
   "scripts": {
@@ -17,12 +17,14 @@
     "url": "https://github.com/zys8119/wujie-vue/issues"
   },
   "homepage": "https://github.com/zys8119/wujie-vue#readme",
+  "peerDependencies": {
+    "vue": "^3.0.0"
+  },
   "dependencies": {
     "lodash": "^4.17.21",
     "wujie": "^1.0.18"
   },
   "devDependencies": {
-    "@types/lodash": "^4.14.197",
-    "vue": "^3.3.4"
+    "@types/lodash": "^4.14.197"
   }
 }

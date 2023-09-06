@@ -1,21 +1,27 @@
+import { merge } from "lodash"
 import { getCurrentInstance} from "vue"
-import wujieVue from "./wujie-vue.vue"
-export const setupWujie = ()=>{
+import WujieVueComponent from "./wujie-vue.vue"
+export const WujieVue = WujieVueComponent
+export const setupWujie = function (){
     if (window.__POWERED_BY_WUJIE__) {
         window.__THIS_WUJIE_VIEW_VM__ = getCurrentInstance();
     }
 }
-export const install = function (app){
-    if (window.__POWERED_BY_WUJIE__) {
+export const install = function (app, options = {}){
+    const config = merge({
+        root:true,
+        child:true
+    }, options)
+    if (config.root && window.__POWERED_BY_WUJIE__) {
         window.__THIS_WUJIE_VIEW_VM__ = app;
     }
     app.mixin({
         mounted() {
-            if (typeof this.$WUJIE_MOUNTED &&  window.__POWERED_BY_WUJIE__) {
+            if (config.child &&  window.__POWERED_BY_WUJIE__) {
                 window.__THIS_WUJIE_VIEW_VM__ = this;
             }
         }
     })
-    app.component('wujie-vue', wujieVue)
+    app.component('WujieVue', WujieVueComponent)
 }
 export default install

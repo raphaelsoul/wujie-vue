@@ -9,7 +9,7 @@ declare global {
         $wujie:typeof $wujie
     }
 }
-declare const wujieVue:DefineComponent<
+export declare const WujieVue:DefineComponent<
     {
         readonly appType:string
         readonly config:AppTypeMap
@@ -40,6 +40,12 @@ type AppTypeMapConfig = {
     config?: cacheOptions;
     startOptions?: startOptions;
 };
-export default wujieVue
-
+export interface InstallConfig {
+    root:boolean
+}
+export interface Install {
+    (app:App, config?:Partial<InstallConfig>):void
+}
+export declare const install:Install
+export default install
 export {}
