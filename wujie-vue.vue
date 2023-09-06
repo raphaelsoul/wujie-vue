@@ -183,7 +183,6 @@ watchEffect(async () => {
 .WujieVueRouterView {
     width: 100%;
     height: 100%;
-    margin: -15px;
     :deep(iframe) {
         border: none;
         background-color: transparent;
