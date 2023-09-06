@@ -3,7 +3,7 @@
 
 ## 使用指南
 
-1.如果您是使用 `unplugin-vue-components/vite` 插件，可以按需求使用内置的 Resolver
+1.主框架业务如果您是使用 `unplugin-vue-components/vite` 插件，可以按需求使用内置的 Resolver
 
 * vite.config.ts
 ```typescript
