@@ -48,5 +48,5 @@ export interface Install {
 }
 export declare const install:Install
 export default install
-export declare const setupWujie:()=> void
+export declare const setupWujie:(exposed?: any)=> void
 export {}
