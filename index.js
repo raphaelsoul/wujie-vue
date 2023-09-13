@@ -1,8 +1,9 @@
 import { merge, get } from "lodash"
 import { getCurrentInstance} from "vue"
-export const setupWujie = function (){
+export const setupWujie = function (exposed){
     if (window.__POWERED_BY_WUJIE__) {
         window.__THIS_WUJIE_VIEW_VM__ = getCurrentInstance();
+        window.__THIS_WUJIE_EXPOSED__ = exposed;
     }
 }
 export const install = function (app, options = {}){
